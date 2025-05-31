@@ -1,0 +1,169 @@
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+/****************************************************/
+/***********************  BODY  *********************/
+/****************************************************/
+
+body{
+  background-color: lightgoldenrodyellow;
+  margin: 0;
+  display: grid;
+  /*makes a grid consisting of 1 column where 
+    every child of "body" gets its own row*/
+  grid-template-columns: auto; 
+}
+
+
+/****************************************************/
+/********************  1 - NAV   ********************/
+/****************************************************/
+nav{
+  display: inline-flex;
+  /*Puts space between .logo, list, & button.
+    Used w/ flex containers only.*/
+  justify-content: space-between;
+  /*puts .logo, list, & button in the center of their
+    respective text boxes. Works w/ flexboxes (or grids).*/
+  align-items: center;
+  /*padding & border are included in width & height*/
+  box-sizing: border-box;
+  margin: 0;
+  height: 55px;
+  background-color: #f6cb06;
+  font-size: min(16px, 3.5vw);
+
+  /*variables*/
+  --menu-exterior-padding: 2vw;
+}
+
+/****************************************************/
+/******************** 1.1 - Logo   ******************/
+/****************************************************/
+.logo{
+  /*Turns  cursor into a pointer when hovered over*/
+  cursor: pointer; 
+  width: 50px; 
+  padding-left: var(--menu-exterior-padding);
+}
+
+
+/****************************************************/
+/******************** 1.2 - List   ******************/
+/****************************************************/
+nav ul li{
+  display: inline-flex;
+  /*font & backup font here*/
+  font-family: "Montserrat", 'sans-serif';
+  font-weight: 500;
+  padding: 0px .7vw;
+}
+
+nav ul li a{
+  /*Remove link highlighting & underline*/
+  text-decoration: none; 
+  color: black;
+}
+
+/*hover pseudo-class*/
+nav ul li a:hover{
+  /*all means all properties, can specify just one
+    instead like 'width'*/
+  transition: all 0.3s ease 0s;
+  color: white;
+    
+    /*media query*/
+  @media screen and (min-width: 480px){
+    text-decoration: underline;
+    text-underline-offset: 20.5px;    
+  }
+
+}
+
+/****************************************************/
+/******************** 1.3 - Button ******************/
+/****************************************************/
+
+.button-link{
+  padding-right: var(--menu-exterior-padding);
+}
+
+nav a button{
+  /*top-bottom, left-right*/
+  padding: 9px 20px;
+  background-color: rgba(0, 171, 180, 1);
+  border: none;
+  /*makes an oval*/
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+nav a button:hover{
+  /*makes transparent effect when hovering over it*/
+  background-color: rgba(0, 171, 180, 0.6);
+}
+
+/****************************************************/
+/********************  2 - Title  *******************/
+/****************************************************/
+
+h1{
+  margin: 50px 50px 0px 50px;
+  font-family: Poppins;
+}
+
+
+/****************************************************/
+/*****************  3 - CHARACTERS  *****************/
+/****************************************************/
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  /*space b/w each flex box item/cell*/
+  gap: 25px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.character {
+  /*h-offset, v-offset, blur, spread, color*/
+  /*'blur' ctrls the blur of the shadow line*/
+  /*'spread' increases the size of the shadow*/
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5); 
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+.character:hover{
+  /*makes transparent effect when hovering over it*/
+  background-color: rgba(246, 203, 6, .5);
+}
+
+.character img {
+  width: 280px;
+  height: 310px;
+  margin-bottom: 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.character hr{
+  margin: 0px 25px 0px 25px;
+}
+
+h2 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  /*spacing b/w letters*/
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #f6cb06;
+  margin-top: 0.01vw;
+}

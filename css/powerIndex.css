@@ -1,0 +1,273 @@
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+html{
+	/*global variables*/
+	--c1: #6b6bd6;
+	--c2: #e74f4f;
+	--c3: #fc921f;
+	--c4: #149ece;
+	--c5: #50ff00;
+	/*Per each figure, not all "figures"*/
+	--graph-width: 325px;
+}
+
+/****************************************************/
+/***********************  BODY  *********************/
+/****************************************************/
+body{
+	display:grid;
+	grid-template-columns: auto;
+	background: lightgoldenrodyellow;
+	margin: 0;
+}
+
+/****************************************************/
+/********************  1 - NAV   ********************/
+/****************************************************/
+nav{
+	display: inline-flex;
+	/*Puts space between .logo, list, & button.
+	  Used w/ flex containers only.*/
+	justify-content: space-between;
+	/*puts .logo, list, & button in the center of their
+	  respective text boxes. Works w/ flexboxes (or grids).*/
+	align-items: center;
+	/*padding & border are included in width & height*/
+	box-sizing: border-box;
+	margin: 0;
+	height: 55px;
+    background-color: #f6cb06;
+    font-size: min(16px, 3.5vw);
+
+    /*variables*/
+    --menu-exterior-padding: 2vw;
+}
+
+/****************************************************/
+/******************** 1.1 - Logo   ******************/
+/****************************************************/
+.logo{
+	/*Turns  cursor into a pointer when hovered over*/
+	cursor: pointer; 
+	width: 50px; 
+	padding-left: var(--menu-exterior-padding);
+}
+
+
+/****************************************************/
+/******************** 1.2 - List   ******************/
+/****************************************************/
+nav ul li{
+	display: inline-flex;
+	/*font & backup font here*/
+	font-family: "Montserrat", 'sans-serif';
+	font-weight: 500;
+	padding: 0px .7vw;
+}
+
+nav ul li a{
+	/*Remove link highlighting & underline*/
+	text-decoration: none; 
+	color: black;
+}
+
+/*hover pseudo-class*/
+nav ul li a:hover{
+	/*all means all properties, can specify just one
+	  instead like 'width'*/
+	transition: all 0.3s ease 0s;
+	color: white;
+    
+    /*media query*/
+	@media screen and (min-width: 480px){
+		text-decoration: underline;
+		text-underline-offset: 20.5px;		
+	}
+
+}
+
+/****************************************************/
+/******************** 1.3 - Button ******************/
+/****************************************************/
+
+.button-link{
+	padding-right: var(--menu-exterior-padding);
+}
+
+nav a button{
+	/*top-bottom, left-right*/
+	padding: 9px 20px;
+	background-color: rgba(0, 171, 180, 1);
+	border: none;
+	/*makes an oval*/
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+nav a button:hover{
+	/*makes transparent effect when hovering over it*/
+	background-color: rgba(0, 171, 180, 0.6);
+}
+
+
+/**********************************************/
+/****************  2 - Figures  ***************/
+/**********************************************/
+h1{
+	margin: 20px auto;
+	font-family: system-ui, sans-serif;
+}
+
+.figures{
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+	gap: 2rem;
+	max-width: max(350px, 100vw);
+}
+
+/**********************************************/
+/****************  2.1 - Graphs  **************/
+/**********************************************/
+#graph1{
+	width: var(--graph-width);
+	max-width: var(--graph-width);
+	/*makes a square as a opposed to a rectangle*/
+	aspect-ratio: 1;
+	border-radius: 50%;
+	/*Radial gradient generates concentric circles.
+	  Three are done here w/ the outer & inner circles
+	  the same color as the background & the middle circle
+	  set to transparent (this allows the background 
+	  'conic-gradient to show through).*/
+	background-image: radial-gradient(lightgoldenrodyellow 0 40%, 
+		                              transparent 40% 70%, 
+		                              lightgoldenrodyellow 70%), 
+	                  /*Conic gradient varies as you go 360 
+	                    degrees around a center point*/
+	                  conic-gradient(from 30deg, 
+	                  	             var(--c1) 0% 0%, 
+	                  	             var(--c2) 0% 20%, 
+	                  	             var(--c3) 20% 60%, 
+	                  	             var(--c4) 60% 100%,
+	                  	             var(--c5) 100% 100%);
+}
+
+#graph2{
+	width: var(--graph-width);
+	max-width: var(--graph-width);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-image: radial-gradient(lightgoldenrodyellow 0 40%, 
+		                              transparent 40% 70%, 
+		                              lightgoldenrodyellow 70%), 
+	                  conic-gradient(from 30deg, 
+	                  	             var(--c1) 0% 20%, 
+	                  	             var(--c2) 20% 100%, 
+	                  	             var(--c3) 100% 100%);
+}
+
+/**********************************************/
+/****************  2.2 - Legend  **************/
+/**********************************************/
+.legend{
+	max-width: 300px;
+	font-size: 0.9rem;
+	gap: 1rem;
+	font-family: system-ui, sans-serif;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+/**********************************************/
+/************  2.2.1 - Legend Word  ***********/
+/**********************************************/
+.legend span{
+	position: relative;
+	/*padding to the left of the span
+	  which in this case is a word/key*/
+	padding-inline-start: 1.25rem;
+
+}
+
+
+/**********************************************/
+/***********  2.2.2 - Legend Circle  **********/
+/**********************************************/
+
+/*"before" pseudo element (notice the circles appear
+  right before the legend text.*/
+.legend span::before{
+	/*absolute is relative to its parent*/
+	position: absolute;
+	top: 0.2rem;
+	left: 0;
+	/*adds content*/
+	content: '';
+	width: 0.8rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+
+.legend span:nth-child(1)::before{
+	background-color: var(--c1);
+}
+
+.legend span:nth-child(2)::before{
+	background-color: var(--c2);
+}
+
+.legend span:nth-child(3)::before{
+	background-color: var(--c3);
+}
+
+.legend span:nth-child(4)::before{
+	background-color: var(--c4);
+}
+
+.legend span:nth-child(5)::before{
+	background-color: var(--c5);
+}
+
+/**********************************************/
+/****************  3 - Article  ***************/
+/**********************************************/
+
+article{
+  background-color: white;
+  border-radius: 10px;
+  width: max(80%, 340px);
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+article h2, p{
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+article p{
+  font-size: 18px;
+  margin-right: 10px;
+  margin-bottom: 12px;
+}
+
+article ul{
+	margin-top: 0px;
+}
+
+article ul li{
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+
+hr{
+	margin-left: 10px;
+	margin-right: 10px;
+}

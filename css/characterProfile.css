@@ -1,0 +1,263 @@
+/*Imports Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+html{
+	/*Global Variables*/
+	--aside-color-left: #f6cb06;
+	--aside-color-right: rgb(255, 219, 160);
+	--aside-border-size: 3.5px;
+	--aside-stats-and-traits-font-sz: 15px;
+	--space-after-nav: 50px;
+
+	background-color: lightgoldenrodyellow;
+}
+
+
+/****************************************************/
+/***********************  BODY  *********************/
+/****************************************************/
+body{
+	display: grid;
+	grid-template-columns: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+/****************************************************/
+/********************  1 - NAV   ********************/
+/****************************************************/
+nav{
+	display: inline-flex;
+	/*Puts space between .logo, list, & button.
+	  Used w/ flex containers only.*/
+	justify-content: space-between;
+	/*puts .logo, list, & button in the center of their
+	  respective text boxes. Works w/ flexboxes (or grids).*/
+	align-items: center;
+	/*padding & border are included in width & height*/
+	box-sizing: border-box;
+	margin: 0;
+	height: 55px;
+    background-color: #f6cb06;
+    font-size: min(16px, 3.5vw);
+
+    /*variables*/
+    --menu-exterior-padding: 2vw;
+}
+
+/****************************************************/
+/******************** 1.1 - Logo   ******************/
+/****************************************************/
+.logo{
+	/*Turns  cursor into a pointer when hovered over*/
+	cursor: pointer; 
+	width: 50px; 
+	padding-left: var(--menu-exterior-padding);
+}
+
+
+/****************************************************/
+/******************** 1.2 - List   ******************/
+/****************************************************/
+nav ul li{
+	display: inline-flex;
+	/*font & backup font here*/
+	font-family: "Montserrat", 'sans-serif';
+	font-weight: 500;
+	padding: 0px .7vw;
+}
+
+nav ul li a{
+	/*Remove link highlighting & underline*/
+	text-decoration: none; 
+	color: black;
+}
+
+/*hover pseudo-class*/
+nav ul li a:hover{
+	/*all means all properties, can specify just one
+	  instead like 'width'*/
+	transition: all 0.3s ease 0s;
+	color: white;
+    
+    /*media query*/
+	@media screen and (min-width: 480px){
+		text-decoration: underline;
+		text-underline-offset: 20.5px;		
+	}
+
+}
+
+/****************************************************/
+/******************** 1.3 - Button ******************/
+/****************************************************/
+
+.button-link{
+	padding-right: var(--menu-exterior-padding);
+}
+
+nav a button{
+	/*top-bottom, left-right*/
+	padding: 9px 20px;
+	background-color: rgba(0, 171, 180, 1);
+	border: none;
+	/*makes an oval*/
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+nav a button:hover{
+	/*makes transparent effect when hovering over it*/
+	background-color: rgba(0, 171, 180, 0.6);
+}
+
+
+
+/****************************************************/
+/********************  2 - Main  ********************/
+/****************************************************/
+main{
+	display: flex;
+	flex-wrap: wrap;
+    /*default is 'normal' which strecthes items;
+      however, 'center' does not*/
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/****************************************************/
+/*******************  2.1 - Aside  ******************/
+/****************************************************/
+aside{
+	border: 1.5px solid black;
+	border-radius: 5px;
+	background-color: white;
+	padding: 2px;
+}
+
+aside h1{
+	text-align: center;
+	background: var(--aside-color-left);
+	margin: 0;
+	font-size: 16px;
+}
+
+/*'#' is used to reference "ids"*/
+#characterImage{
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+}
+
+/****************************************************/
+/******************  2.1.1 - Stats  *****************/
+/****************************************************/
+.stats{
+	border: var(--aside-border-size) solid white;
+	/*collapses borders of adjacent table cells into
+	  single unified borders*/
+	border-collapse: collapse;
+	background-color: var(--aside-color-right);
+	text-align: center;
+	width: 330px;
+	font-size: var(--aside-stats-and-traits-font-sz);
+	table-layout: fixed;
+}
+
+/*nth-child is a pseudo class*/
+/*This block is targeting the first cell of 
+  the table header & the first cell of each 
+  row*/
+.stats th:nth-child(1), .stats td:nth-child(1){
+	width: 110px;
+	font-family: Garamond;
+	background: var(--aside-color-left);
+	font-size: var(--aside-stats-and-traits-font-sz);
+}
+
+.stats td:nth-child(1){
+	font-family: Roboto, Garamond;
+}
+
+.one{
+	border-left: solid var(--aside-color-right);
+}
+
+.filled-in{
+	background: red; 
+	border: 2px solid var(--aside-color-right);
+}
+
+.filled-in-yellow{
+	background: yellow; 
+	border: 2px solid var(--aside-color-right);
+}
+
+/****************************************************/
+/******************  2.1.2 - Traits  ****************/
+/****************************************************/
+.traits{
+	width: 330px;
+	font-size: var(--aside-stats-and-traits-font-sz);
+	border: 1px solid white;
+	font-family: 'Roboto', 'sans-serif';
+}
+
+.traits th:nth-child(1), .traits td:nth-child(1){
+	background: var(--aside-color-left);
+	font-weight: bold;
+}
+
+.traits th:nth-child(2), .traits td:nth-child(2){
+	background: var(--aside-color-right);
+}
+
+
+
+/****************************************************/
+/******************  2.2 - Article  *****************/
+/****************************************************/
+article{
+	/*top, right, bottom, left*/
+	background-color: white;
+	border-radius: 10px;
+	font-family: Roboto, Garamond;
+	width: max(67%, 500px);
+}
+
+article h1{
+	padding-left: 20px;
+	padding-top: 25px;
+	margin-bottom: 0px;
+}
+
+/*first-child is a pseudo class*/
+h1:first-child{
+	padding-top: 15px;
+}
+
+article p{
+	padding-left: 20px;
+	padding-right:  20px;
+	margin-top: 5px;
+	font-size: 18px;
+}
+
+article ol{
+	padding-left: 45px;
+	padding-right: 15px;
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+
+/*horizontal rule aka a horizontal line*/
+hr{
+	width: 97%;
+}
