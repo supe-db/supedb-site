@@ -151,10 +151,10 @@ h1{
 	                    degrees around a center point*/
 	                  conic-gradient(from 30deg, 
 	                  	             var(--c1) 0% 0%, 
-	                  	             var(--c2) 0% 20%, 
-	                  	             var(--c3) 20% 60%, 
-	                  	             var(--c4) 60% 100%,
-	                  	             var(--c5) 100% 100%);
+	                  	             var(--c2) 0% 14%, 
+	                  	             var(--c3) 14% 42%, 
+	                  	             var(--c4) 42% 70%,
+	                  	             var(--c5) 70% 98%);
 }
 
 #graph2{
@@ -166,8 +166,8 @@ h1{
 		                              transparent 40% 70%, 
 		                              lightgoldenrodyellow 70%), 
 	                  conic-gradient(from 30deg, 
-	                  	             var(--c1) 0% 20%, 
-	                  	             var(--c2) 20% 100%, 
+	                  	             var(--c1) 0% 43%, 
+	                  	             var(--c2) 43% 100%, 
 	                  	             var(--c3) 100% 100%);
 }
 
@@ -240,7 +240,7 @@ h1{
 article{
   background-color: white;
   border-radius: 10px;
-  width: max(80%, 340px);
+  width: max(90%, 340px);
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
