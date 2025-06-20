@@ -101,17 +101,19 @@ nav ul li a:hover{
 nav a button{
 	/*top-bottom, left-right*/
 	padding: 9px 20px;
-	background-color: rgba(0, 171, 180, 1);
 	border: none;
 	/*makes an oval*/
-	border-radius: 10px;
+	border-radius: 8px;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
+	/*gradient direction, color & color-stop, color & color start*/
+	/*uninitative color starts & stops create a blend effect/look*/
+	background-image: linear-gradient(to bottom, #ADD8E6 0, #3483eb 100%);
 }
 
 nav a button:hover{
-	/*makes transparent effect when hovering over it*/
-	background-color: rgba(0, 171, 180, 0.6);
+	/*creates a changing colors effect when hovering over it*/
+	background-image: linear-gradient(to bottom, #669ed4 0, #5998d4 100%);
 }
 
 
