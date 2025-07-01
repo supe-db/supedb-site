@@ -11,9 +11,22 @@
 
 <body>
 
+  <!--used only on small screens, this sidescreen appears when clicking the hamburger menu-->
+  <div class="nav-sidescreen">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="items.html">Items</a></li>
+          <li><a href="geo.html">Geo</a></li>
+          <li><a href="powerIndex.html">Power Index</a></li>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="store.html">Buy</a></li>
+        </ul>
+  </div>
+
   <nav>
     <a href="index.html"><img class="logo" src="images/logo.png"></a>
-    <ul>
+        <ul class= "nav-options-fullscreen"> <!--used on regular sized screens only-->
           <li><a href="index.html">Home</a></li>
           <li><a href="characters.html">Characters</a></li>
           <li><a href="items.html">Items</a></li>
@@ -21,10 +34,20 @@
           <li><a href="powerIndex.html">Power Index</a></li>
           <li><a href="credits.html">Credits</a></li>
     </ul>
-    <a class="button-link" href="store.html">
+    <a class="button-link" href="store.html"><!--used on regular sized screens only-->
       <button>Buy</button>
     </a>
+
+        <!--used only on small screens-->
+        <div class="ham-menu">
+           <span></span>
+           <span></span>
+           <span></span>
+        </div>
   </nav>
+  <!--Used for hamburger menu & side screen. This is only used on small screen devices.-->
+  <!--This allows the toggling of the hamburger menu-->
+  <script src="js/sidescreen.js"></script>
 
 	<article>
 		<h1>
