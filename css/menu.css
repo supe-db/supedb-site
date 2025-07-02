@@ -119,6 +119,10 @@ nav a button:hover{
 }
 
 @media only screen and (max-width: 650px) {
+	.ham-menu:hover{
+		cursor: pointer;
+	}
+
 	.ham-menu span{
 		/*position of ham-menu bars ('spans') is absolute relative to the parent*/
 		/*The 'top' property only works on posistioned elements so we have to set 'position'*/
@@ -127,7 +131,7 @@ nav a button:hover{
 		   below is working relative to a parent/grandparent.*/
 		position: absolute;
 		background-color: black;
-		height: 5px;
+		height: 3.9px;
 		width: 30px;
 		/*move spans horizontally left & veritically up respectively */
 		transform: translate(-3px, -3px); 
@@ -136,11 +140,11 @@ nav a button:hover{
 	}
 
 	.ham-menu span:nth-child(1) {
-	    top: 17px;
+	    top: 19px;
 	}
 
 	.ham-menu span:nth-child(3) {
-	    top: 39px;
+	    top: 36px;
 	}
 
     /*The active pseudo class is set on click (via javascript)*/
@@ -152,7 +156,7 @@ nav a button:hover{
 	.ham-menu.active span:nth-child(1) {
 	    /*makes half the "X" aka the close window button*/
 	    /*translates to the left & down*/
-	    transform: translate(-5px, 11px) rotate(45deg);
+	    transform: translate(-5px, 8.8px) rotate(45deg);
 	}
 	.ham-menu.active span:nth-child(2) {
 	    opacity: 0; /*disappears middle span*/
@@ -160,7 +164,7 @@ nav a button:hover{
 	.ham-menu.active span:nth-child(3) {
 	    /*makes the other half of the "X" aka for the close window button*/
 	    /*translates to the left & up*/
-	    transform: translate(-5px, -11px) rotate(-45deg); 
+	    transform: translate(-5px, -8.8px) rotate(-45deg); 
 	}
 }
 
