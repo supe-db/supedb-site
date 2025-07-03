@@ -78,3 +78,14 @@ h2 {
   color: #f6cb06;
   margin-top: 0.01vw;
 }
+
+
+/**************TEAM CHARACTER CLASSES**************/
+.team-div{
+  width: 280px;
+  overflow-x: scroll;
+}
+
+.team-div .team-img{
+   width: 350px;
+}
