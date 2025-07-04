@@ -15,7 +15,7 @@ body{
     every child of "body" gets its own row*/
   grid-template-columns: auto; 
 
-  --character-img-width: 200px;
+  --character-img-width: 250px;
 }
 
 
@@ -38,7 +38,7 @@ main {
   flex-wrap: wrap;
   /*space b/w each flex box item/cell*/
   gap: 25px;
-  margin: 10px 30px 50px 60px;
+  margin: 10px 30px 50px 55px;
 }
 
 .character {
