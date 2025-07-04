@@ -36,11 +36,9 @@ h1{
 main {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
   /*space b/w each flex box item/cell*/
   gap: 25px;
-  margin-top: 10px;
-  margin-left: 39px;
+  margin: 10px 30px 50px 60px;
 }
 
 .character {
