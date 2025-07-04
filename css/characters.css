@@ -38,7 +38,7 @@ main {
   flex-wrap: wrap;
   /*space b/w each flex box item/cell*/
   gap: 25px;
-  margin: 10px 30px 50px 55px;
+  margin: 10px 0 50px 55px;
 }
 
 .character {
