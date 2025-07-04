@@ -1,11 +1,36 @@
-// Array of headings and image URLs
-const content = [
+// Arrays of headings and image URLs
+const sorArr = [
   { name: "SoR - Bandit", img: "../images/bandit-bg.jpg"},
   { name: "SoR - Quick Draw", img: "../images/quickdraw-bg.jpeg"},
   { name: "SoR - Gunslinger", img: "../images/gunslinger-bg.jpeg"},
   { name: "SoR - Viper", img: "../images/viper-bg.jpeg"},
-  { name: "SoR - Red Back", img: "../images/redback-bg.jpeg"},
+  { name: "SoR - Red Back", img: "../images/redback-bg.jpeg"}
 ];
+
+const tigerArr = [
+  { name: "Tiger Hide", img: "../images/tigerhide-bg.jpeg"},
+  { name: "Tiger Hide - Enhanced", img: "../images/tigerhideenhanced-bg.jpeg"}
+];
+
+/*Retrieve correct array based on script id*/
+let content;
+let script = document.getElementById("sor-teamscript");
+if(script != null)
+{
+	content = sorArr;
+}
+
+script = document.getElementById("tiger-teamscript");
+if(script != null)
+{
+	content = tigerArr;
+}
+
+//throw an exception if no matching script was found
+if(content == null)
+{
+	throw new Error("Array of team members is empty. Returning...");
+}
 
 //a 'let' variables cannot be redeclared in the same scope
 let currentIndex = 0;
