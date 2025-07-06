@@ -1,15 +1,21 @@
 // Arrays of headings and image URLs
 const sorArr = [
-  { name: "SoR - Bandit", img: "../images/bandit-bg.jpg"},
-  { name: "SoR - Quick Draw", img: "../images/quickdraw-bg.jpeg"},
-  { name: "SoR - Gunslinger", img: "../images/gunslinger-bg.jpeg"},
-  { name: "SoR - Viper", img: "../images/viper-bg.jpeg"},
-  { name: "SoR - Red Back", img: "../images/redback-bg.jpeg"}
+  { name: "SoR - Bandit", img: "../../images/bandit-bg.jpg"},
+  { name: "SoR - Quick Draw", img: "../../images/quickdraw-bg.jpeg"},
+  { name: "SoR - Gunslinger", img: "../../images/gunslinger-bg.jpeg"},
+  { name: "SoR - Viper", img: "../../images/viper-bg.jpeg"},
+  { name: "SoR - Red Back", img: "../../images/redback-bg.jpeg"}
 ];
 
 const tigerArr = [
-  { name: "Tiger Hide", img: "../images/tigerhide-bg.jpeg"},
-  { name: "Tiger Hide - Enhanced", img: "../images/tigerhideenhanced-bg.jpeg"}
+  { name: "Tiger Hide", img: "../../images/tigerhide-bg.jpeg"},
+  { name: "Tiger Hide - Enhanced", img: "../../images/tigerhideenhanced-bg.jpeg"}
+];
+
+const centuryArr = [
+  { name: "The Century", img: "../../images/century-bg.jpeg" },
+  { name: "Proto-Armor", img: "../../images/protoarmor-bg.jpeg" },
+  { name: "Michael Preston", img: "../../images/michael-bg.jpeg" }
 ];
 
 /*Retrieve correct array based on script id*/
@@ -24,6 +30,12 @@ script = document.getElementById("tiger-teamscript");
 if(script != null)
 {
 	content = tigerArr;
+}
+
+script = document.getElementById("century-teamscript");
+if(script != null)
+{
+  content = centuryArr;
 }
 
 //throw an exception if no matching script was found
