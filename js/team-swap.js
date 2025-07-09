@@ -18,6 +18,14 @@ const centuryArr = [
   { name: "Michael Preston", img: "../images/michael-bg.jpeg" }
 ];
 
+const syndicateArr = [
+  { name: "Syndicate - Pyromaniac", img: "../images/pyromaniac-bg.jpeg" },
+  { name: "Syndicate - Nemesis", img: "../images/nemesis-bg.jpeg" },
+  { name: "Syndicate - Quick Draw", img: "../images/quickdraw-bg.jpeg" },
+  { name: "Syndicate - Vex Krueger", img: "../images/vexkrueger-bg.jpeg" },
+  { name: "Syndicate - Tiger Hide", img: "../images/tigerhideenhanced-bg.jpeg" },
+];
+
 /*Retrieve correct array based on script id*/
 let content;
 let script = document.getElementById("sor-teamscript");
@@ -36,6 +44,12 @@ script = document.getElementById("century-teamscript");
 if(script != null)
 {
   content = centuryArr;
+}
+
+script = document.getElementById("syndicate-teamscript");
+if(script != null)
+{
+  content = syndicateArr;
 }
 
 //throw an exception if no matching script was found
