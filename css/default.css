@@ -68,4 +68,5 @@ figure{
 .bookCover{
 	height: auto;
 	width: 35vw;
+	cursor: pointer;
 }
