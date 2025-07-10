@@ -20,12 +20,21 @@ body{
 
 
 /****************************************************/
-/********************  2 - Title  *******************/
+/********************  1 - Title  *******************/
 /****************************************************/
 
 h1{
   margin: 50px 50px 0px 50px;
   font-family: Poppins;
+}
+
+
+/****************************************************/
+/*****************  2 - Dropdown Menu  **************/
+/****************************************************/
+#characterDropdownMenu{
+  margin: 15px 0 0 55px;
+  width: 150px;
 }
 
 
@@ -42,6 +51,8 @@ main {
 }
 
 .character {
+  display: hidden; /*default the display to hidden, it will be updated by javascript*/
+
   /*h-offset, v-offset, blur, spread, color*/
   /*'blur' ctrls the blur of the shadow line*/
   /*'spread' increases the size of the shadow*/
