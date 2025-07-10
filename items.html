@@ -56,12 +56,17 @@
     <script src="js/sidescreen.js"></script>
     
 
-    <h1>Items (8)</h1>
+    <h1>Items </h1>
+
+    <select id="characterDropdownMenu">
+      <option value="theYesterdayMan">The Yesterday Man</option>
+      <option value="destinyStalker">Destiny Stalker</option>
+    </select>
 
     <main>
 
       <!--treat each item as a character-->
-      <div class="character">
+      <div class="character theYesterdayMan">
         <a href="items/time-machine.html">
           <img src="images/timemachine-nobg.png"/>
         </a>
@@ -69,7 +74,7 @@
         <h2>The Time Machine</h2>
       </div>
 
-      <div class="character">
+      <div class="character theYesterdayMan">
         <a href="items/liar-device.html">
           <img src="images/liardevice-nobg.png"/>
         </a>
@@ -77,7 +82,7 @@
         <h2>The L.I.A.R. Device</h2>
       </div>
 
-      <div class="character">
+      <div class="character theYesterdayMan">
         <a href="items/bff-device.html">
           <img src="images/bffdevice-nobg.png"/>
         </a>
@@ -85,47 +90,51 @@
         <h2>The B.F.F Device</h2>
       </div>
 
-      <div class="character">
+      <div class="character destinyStalker">
         <a href="items/long-sword.html"/>
-          <img src="images/longsword-nobg.png"/>
+          <img src="images/longsword-nobg.png" loading="lazy"/>
         </a>
         <hr/>
         <h2>LONG SWORD</h2>
       </div>
 
-      <div class="character">
+      <div class="character destinyStalker">
         <a href="items/great-sword.html"/>
-          <img src="images/greatsword-nobg.png"/>
+          <img src="images/greatsword-nobg.png" loading="lazy"/>
         </a>
         <hr/>
         <h2>A GREAT SWORD</h2>
       </div>
 
-      <div class="character">
+      <div class="character destinyStalker">
         <a href="items/dragon-slayer.html"/>
-          <img src="images/dragonslayer-nobg.png"/>
+          <img src="images/dragonslayer-nobg.png" loading="lazy"/>
         </a>
         <hr/>
         <h2>THE DRAGON SLAYER</h2>
       </div>
 
-      <div class="character">
+      <div class="character destinyStalker">
         <a href="items/destiny-stalker.html"/>
-          <img src="images/destinystalker-nobg.png"/>
+          <img src="images/destinystalker-nobg.png" loading="lazy"/>
         </a>
         <hr/>
         <h2>THE DESTINY STALKER</h2>
       </div>
 
-      <div class="character">
+      <div class="character destinyStalker">
         <a href="items/tundra-force.html"/>
-          <img src="images/tundraforce-nobg.png"/>
+          <img src="images/tundraforce-nobg.png" loading="lazy"/>
         </a>
         <hr/>
         <h2>TUNDRA FORCE</h2>
       </div>
 
     </main>
+
+    <!--script to only display selected items by series-->
+    <script src="js/dropdown-menu-selection.js"></script>
+
   </body>
 
 </html>

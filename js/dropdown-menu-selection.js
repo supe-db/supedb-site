@@ -1,6 +1,10 @@
 //Get a reference to the dropdown menu
 const dropdown = document.getElementById("characterDropdownMenu");
 
+//get page title
+const body = document.body;
+const pageTitle = body.querySelector("h1").textContent;
+
 //Function to update the characters viewable on the screen based on series.
 function updateViewableCharacters(){
   const selectedValue = dropdown.value;
@@ -30,8 +34,7 @@ function updateViewableCharacters(){
   }
 
   //Update characterTotal
-  const body = document.body;
-  body.querySelector("h1").textContent = 'Characters(' + characterCount + ')';
+  body.querySelector("h1").textContent = pageTitle + '(' + characterCount + ')';
 
 }
 
