@@ -19,10 +19,10 @@ const centuryArr = [
 ];
 
 const syndicateArr = [
-  { name: "Syndicate - Pyromaniac", img: "../images/pyromaniac-bg.jpeg" },
   { name: "Syndicate - Nemesis", img: "../images/nemesis-bg.jpeg" },
   { name: "Syndicate - Quick Draw", img: "../images/quickdraw-bg.jpeg" },
   { name: "Syndicate - Vex Krueger", img: "../images/vexkrueger-bg.jpeg" },
+  //{ name: "Syndicate - ???", img: "../images/???-bg.jpeg" }, TODO: add later
   { name: "Syndicate - Tiger Hide", img: "../images/tigerhideenhanced-bg.jpeg" },
 ];
 
