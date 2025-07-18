@@ -75,11 +75,15 @@
         <h2>???</h2>
       </div>
 
-      <div class="character">
-        <img src="images/question mark.png"/>
-        <hr/>
-        <h2>???</h2>
-      </div>
+      <!--add "hidden-flex-item" divs so that flex-grow doesn't 'super'
+          stretch the existing items in a row since flex grow will stretch 
+          all items in a row to fit that row. Here we use hidden items
+          that don't show up but are used for flex-grow to calculate the 
+          number of items in a row & thus how much stretching to do per item.-->
+      <div class="hidden-flex-item"></div>
+      <div class="hidden-flex-item"></div>
+      <div class="hidden-flex-item"></div>
+      <div class="hidden-flex-item"></div>
 
     </main>
   </body>
