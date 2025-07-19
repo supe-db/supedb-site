@@ -143,8 +143,8 @@ main {
   max-width: 1600px;
 
   @media screen and (max-width: 480px){
-  	margin: 0 1.5vw;
-  	gap: 3vw;
+  	margin: 2vw;
+  	gap: 2vw;
   }
 }
 
