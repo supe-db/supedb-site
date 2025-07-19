@@ -82,6 +82,20 @@ h1{
 	                  	             var(--c3) 88% 99%);
 }
 
+#graph3{
+	width: var(--graph-width);
+	max-width: var(--graph-width);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-image: radial-gradient(lightgoldenrodyellow 0 40%, 
+		                              transparent 40% 70%, 
+		                              lightgoldenrodyellow 70%), 
+	                  conic-gradient(from 30deg, 
+	                  	             var(--c1) 0% 33%, 
+	                  	             var(--c2) 33% 66%, 
+	                  	             var(--c3) 66% 99%);
+}
+
 /**********************************************/
 /****************  2.2 - Legend  **************/
 /**********************************************/
@@ -151,7 +165,7 @@ h1{
 article{
   background-color: white;
   border-radius: 10px;
-  width: max(90%, 340px);
+  width: max(96%, 340px);
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;

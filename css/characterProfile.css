@@ -32,13 +32,19 @@ body{
 main{
 	display: flex;
 	flex-wrap: wrap;
+
+    align-items: flex-start;
     /*default is 'normal' which strecthes items;
       however, 'center' does not*/
-    align-items: flex-start;
     justify-content: center;
-    gap: 3vw;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 2vw;
+    margin: 2vw;
+
+    /*workaround for small screened phones in which
+      margin + aside is too wide*/
+    @media only screen and (max-width: 380px) {
+    	margin: 1vw;
+    }
 }
 
 /****************************************************/
@@ -49,6 +55,9 @@ aside{
 	border-radius: 5px;
 	background-color: white;
 	padding: 2px;
+	/*flex-grow flex-shrink flex-basis*/
+	flex: 1 0 0;
+	max-width: 330px;
 }
 
 aside h1{
@@ -146,7 +155,10 @@ article{
 	background-color: white;
 	border-radius: 10px;
 	font-family: Roboto, Garamond;
-	width: max(67%, 500px);
+
+	/*flex-grow flex-shrink flex-basis*/
+	flex:1 0 0;
+	min-width: 310px;
 }
 
 article h1{
