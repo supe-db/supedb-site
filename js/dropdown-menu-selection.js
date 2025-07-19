@@ -1,5 +1,6 @@
-//Get a reference to the dropdown menu
-const dropdown = document.getElementById("characterDropdownMenu");
+//set the default current selection.
+const DEFAULT_SELECTION_CLASS = "theYesterdayMan";
+let currentSelection = DEFAULT_SELECTION_CLASS;
 
 //get page title
 const body = document.body;
@@ -9,13 +10,13 @@ const pageTitle = body.querySelector("h1").textContent;
 function updateViewableCharacters(){
 
   // Remove all dummy divs of class-type 'hidden-flex-item' before
-  // generating the current layout. More on this later in the function.
+  // generating the current layout. More on this later in this function.
   const dummyDivs = document.querySelectorAll('div.hidden-flex-item');
   dummyDivs.forEach(div => div.remove());
 
-  //get the dropdown menu's current value
-  const selectedValue = dropdown.value;
-  console.log("Dropdown Value:", dropdown.value);
+  //get the dropdown menu's current selection
+  const selectedValue = currentSelection;
+  console.log("Selected Value:", selectedValue);
 
   // Get all elements with the class name "character"
   const characters = document.getElementsByClassName("character");
@@ -24,7 +25,7 @@ function updateViewableCharacters(){
   let characterCount = 0;
 
   //loop through all characters and only show characters from the selected
-  //series
+  //series (aka the current selection/ current value).
   for(let i=0; i < characters.length; i++){
 
     const characterName = characters[i].querySelector("h2").innerHTML;
@@ -40,17 +41,17 @@ function updateViewableCharacters(){
     }
   }
 
-  //Update characterTotal
+  //Update the total # of characters displayed.
   body.querySelector("h1").textContent = pageTitle + '(' + characterCount + ')';
 
   //Generate dummy divs to fill in the last row so that flex-grow doesn't super 
   //stretch items to fill the width of the screen. E.g. if a row has 2 items flex-
   //grow will stretch them the whole width of a screen, this code ensures each row
-  //has at least 'maxItemsPerRow' which is the max number of items a normal row
+  //has at least 'MAX_ITEMS_PER_ROW' which is the max number of items a normal row
   //can have. Since each row is now full (b/c of the below loop), excessive stretching 
   //won't happen.
-  const maxItemsPerRow = 6;
-  for(let i = 0; i < (maxItemsPerRow - (characterCount % maxItemsPerRow)); i++)
+  const MAX_ITEMS_PER_ROW = 6;
+  for(let i = 0; i < (MAX_ITEMS_PER_ROW - (characterCount % MAX_ITEMS_PER_ROW)); i++)
   {
     const newDummyDiv = document.createElement('div');
     newDummyDiv.className = 'hidden-flex-item';
@@ -59,10 +60,19 @@ function updateViewableCharacters(){
 
 }
 
-//Add an event listener to the dropdown for the 'change' event
-//This will cause updateViewableCharacters() to be called when the value
-//in the dropdown menu changes.
-dropdown.addEventListener("change", updateViewableCharacters);
+
+/*get all option menu options*/
+const options = document.querySelectorAll('.option');
+
+//Add an event listener for each 'option' for the 'click' event.
+//This will trigger the below callback. The below callback sets the current selection
+//and then calls the 'updateViewableCharacters' function.
+options.forEach(option => {
+  option.addEventListener('click', () => {
+    currentSelection = option.getAttribute('data-value');
+    updateViewableCharacters();
+  })
+})
 
 //Initial call that triggers when a page first loads
 updateViewableCharacters();
