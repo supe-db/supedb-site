@@ -66,16 +66,16 @@ h1{
 	                  /*Conic gradient varies as you go 360 
 	                    degrees around a center point*/
 	                  conic-gradient(from 30deg, 
-	                  	             var(--c1) 0% 10%, 
-	                  	             var(--c2) 10% 20%, 
-	                  	             var(--c3) 20% 30%, 
-	                  	             var(--c4) 30% 40%,
-	                  	             var(--c5) 40% 50%,
-	                  	             var(--c6) 50% 60%,
-	                  	             var(--c7) 60% 70%,
-	                  	             var(--c8) 70% 80%,
-	                  	             var(--c9) 80% 90%,
-	                  	             var(--c10) 90% 100%);
+	                  	             var(--c1) 0% 30%, 
+	                  	             var(--c2) 30% 55%, 
+	                  	             var(--c3) 55% 70%, 
+	                  	             var(--c4) 70% 90%,
+	                  	             var(--c5) 90% 100%,
+	                  	             var(--c6) 100% 100%,
+	                  	             var(--c7) 100% 100%,
+	                  	             var(--c8) 100% 100%,
+	                  	             var(--c9) 100% 100%,
+	                  	             var(--c10) 100% 100%);
 }
 
 #graph2{
@@ -101,13 +101,13 @@ h1{
 		                              transparent 40% 70%, 
 		                              lightgoldenrodyellow 70%), 
 	                  conic-gradient(from 30deg, 
-	                  	             var(--c1) 0% 15%, 
-	                  	             var(--c2) 15% 30%, 
-	                  	             var(--c3) 30% 45%,
-	                  	             var(--c4) 45% 60%,
-	                  	             var(--c5) 60% 75%,
-	                  	             var(--c6) 75% 90%,
-	                  	             var(--c7) 90% 100%);
+	                  	             var(--c1) 0% 25%, 
+	                  	             var(--c2) 25% 50%, 
+	                  	             var(--c3) 50% 75%,
+	                  	             var(--c4) 75% 95%,
+	                  	             var(--c5) 95% 100%,
+	                  	             var(--c6) 100% 100%,
+	                  	             var(--c7) 100% 100%);
 }
 
 /**********************************************/
