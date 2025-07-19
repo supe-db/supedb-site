@@ -10,6 +10,11 @@ html{
 	--c3: #fc921f;
 	--c4: #149ece;
 	--c5: #50ff00;
+	--c6: yellow;
+	--c7: black;
+	--c8: white;
+	--c9: silver;
+	--c10: gold;
 	/*Per each figure, not all "figures"*/
 	--graph-width: 325px;
 }
@@ -61,11 +66,16 @@ h1{
 	                  /*Conic gradient varies as you go 360 
 	                    degrees around a center point*/
 	                  conic-gradient(from 30deg, 
-	                  	             var(--c1) 0% 0%, 
-	                  	             var(--c2) 0% 12%, 
-	                  	             var(--c3) 12% 37%, 
-	                  	             var(--c4) 37% 62%,
-	                  	             var(--c5) 62% 99%);
+	                  	             var(--c1) 0% 10%, 
+	                  	             var(--c2) 10% 20%, 
+	                  	             var(--c3) 20% 30%, 
+	                  	             var(--c4) 30% 40%,
+	                  	             var(--c5) 40% 50%,
+	                  	             var(--c6) 50% 60%,
+	                  	             var(--c7) 60% 70%,
+	                  	             var(--c8) 70% 80%,
+	                  	             var(--c9) 80% 90%,
+	                  	             var(--c10) 90% 100%);
 }
 
 #graph2{
@@ -79,7 +89,7 @@ h1{
 	                  conic-gradient(from 30deg, 
 	                  	             var(--c1) 0% 37%, 
 	                  	             var(--c2) 37% 88%, 
-	                  	             var(--c3) 88% 99%);
+	                  	             var(--c3) 88% 100%);
 }
 
 #graph3{
@@ -91,9 +101,13 @@ h1{
 		                              transparent 40% 70%, 
 		                              lightgoldenrodyellow 70%), 
 	                  conic-gradient(from 30deg, 
-	                  	             var(--c1) 0% 33%, 
-	                  	             var(--c2) 33% 66%, 
-	                  	             var(--c3) 66% 99%);
+	                  	             var(--c1) 0% 15%, 
+	                  	             var(--c2) 15% 30%, 
+	                  	             var(--c3) 30% 45%,
+	                  	             var(--c4) 45% 60%,
+	                  	             var(--c5) 60% 75%,
+	                  	             var(--c6) 75% 90%,
+	                  	             var(--c7) 90% 100%);
 }
 
 /**********************************************/
@@ -156,6 +170,26 @@ h1{
 
 .legend span:nth-child(5)::before{
 	background-color: var(--c5);
+}
+
+.legend span:nth-child(6)::before{
+	background-color: var(--c6);
+}
+
+.legend span:nth-child(7)::before{
+	background-color: var(--c7);
+}
+
+.legend span:nth-child(8)::before{
+	background-color: var(--c8);
+}
+
+.legend span:nth-child(9)::before{
+	background-color: var(--c9);
+}
+
+.legend span:nth-child(10)::before{
+	background-color: var(--c10);
 }
 
 /**********************************************/

@@ -141,6 +141,11 @@ main {
   width: 100%;
   margin: auto auto 20px auto;
   max-width: 1600px;
+
+  @media screen and (max-width: 480px){
+  	margin: 0 1.5vw;
+  	gap: 3vw;
+  }
 }
 
 .character {
@@ -160,7 +165,7 @@ main {
     row b/c flew-grow is set*/
   flex:1 0 var(--character-img-width);
   text-align: center;
-  max-width: 49.5%;
+  max-width: 47%;
   /*padding & border get included in an object's sizing*/
   box-sizing: border-box;
 }
@@ -181,7 +186,7 @@ main {
 
   /*shrink height on small screens*/
   @media screen and (max-width: 480px){
-		height: var(--character-img-width);
+		height: calc(.93 * var(--character-img-width));
   }
 
 }
