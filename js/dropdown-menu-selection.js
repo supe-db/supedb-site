@@ -51,7 +51,7 @@ function updateViewableCharacters(){
   //can have. Since each row is now full (b/c of the below loop), excessive stretching 
   //won't happen.
   const MAX_ITEMS_PER_ROW = 6;
-  for(let i = 0; i < (MAX_ITEMS_PER_ROW - (characterCount % MAX_ITEMS_PER_ROW)); i++)
+  for(let i = 0; i < MAX_ITEMS_PER_ROW-1; i++)
   {
     const newDummyDiv = document.createElement('div');
     newDummyDiv.className = 'hidden-flex-item';

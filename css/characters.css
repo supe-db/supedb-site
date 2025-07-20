@@ -140,7 +140,7 @@ main {
   gap: 1vw; /*space b/w each flex box item/cell*/
   width: 100%;
   margin: auto auto 20px auto;
-  max-width: 1600px;
+  max-width: var(--main-content-width);
 
   @media screen and (max-width: 480px){
   	margin: 2vw;
