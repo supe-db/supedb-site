@@ -44,7 +44,7 @@ h1{
   margin: auto;
 
   /*establishes the width of this div*/
-  width: 100%;
+  width: 96%;
 
   /*puts upper limit on the width*/
   max-width: var(--main-content-width); 
@@ -138,13 +138,13 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1vw; /*space b/w each flex box item/cell*/
-  width: 100%;
+  width: 96%;
   margin: auto auto 20px auto;
   max-width: var(--main-content-width);
 
   @media screen and (max-width: 480px){
   	margin: 2vw;
-  	gap: 2vw;
+  	gap: calc(2vw * .96);
   }
 }
 
@@ -165,7 +165,7 @@ main {
     row b/c flew-grow is set*/
   flex:1 0 var(--character-img-width);
   text-align: center;
-  max-width: 47%;
+  max-width: 49%;
   /*padding & border get included in an object's sizing*/
   box-sizing: border-box;
 }
