@@ -1,6 +1,20 @@
-//set the default current selection.
+//get the current page name
+const path = window.location.pathname;
+const pageName = path.substring(path.lastIndexOf('/') + 1);
+
+//default character selection const value
 const DEFAULT_SELECTION_CLASS = "theYesterdayMan";
-let currentSelection = DEFAULT_SELECTION_CLASS;
+
+//set the current selection to a default value if the current selection
+//is empty OR we changed pages.
+if( (localStorage.getItem('currentSelection') == null) ||
+    (pageName != localStorage.getItem('pageName')) ) 
+{
+  localStorage.setItem('currentSelection', DEFAULT_SELECTION_CLASS);
+}
+
+//set the current page name
+localStorage.setItem('pageName', pageName);
 
 //get page title
 const body = document.body;
@@ -15,7 +29,7 @@ function updateViewableCharacters(){
   dummyDivs.forEach(div => div.remove());
 
   //get the dropdown menu's current selection
-  const selectedValue = currentSelection;
+  const selectedValue = localStorage.getItem('currentSelection');
   console.log("Selected Value:", selectedValue);
 
   // Get all elements with the class name "character"
@@ -69,7 +83,7 @@ const options = document.querySelectorAll('.option');
 //and then calls the 'updateViewableCharacters' function.
 options.forEach(option => {
   option.addEventListener('click', () => {
-    currentSelection = option.getAttribute('data-value');
+    localStorage.setItem('currentSelection', option.getAttribute('data-value'));
     updateViewableCharacters();
   })
 })
